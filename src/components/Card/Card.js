@@ -36,7 +36,7 @@ const EmployeeList = ({
   useEffect(() => {
     fetchEmployees();
   }, []);
-  t;
+
   const deleteEmployeeId = async (id) => {
     try {
       await deleteEmployee(id);
