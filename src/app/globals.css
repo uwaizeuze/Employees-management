@@ -1,27 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.ant-picker-panel-layout {
+  display: flex;
+  flex-direction: column;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.ant-picker-presets {
+  height: 100px;
+  display: grid;
+  width: 290px;
+  grid-area: 10px;
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.ant-picker-presets ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: inherit;
+  column-gap: 5px;
+}
+.ant-picker-presets ul li:nth-child(2) {
+  background-color: #1da1f2;
+  color: #edf8ff;
+}
+.ant-picker-presets ul li {
+  background-color: #edf8ff;
+  text-align: center;
+  margin: auto 0px;
+  padding: 14px 0px;
+  color: #1da1f2;
+  padding: 4px !important;
+}
+.ant-picker-suffix {
+  color: #1da1f2 !important;
+}
+/* / Hide the default arrow / */
+.custom-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("../assets/images/ArrowDown.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-right: 20px;
 }
